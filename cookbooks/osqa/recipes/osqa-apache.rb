@@ -124,6 +124,7 @@ execute "python syncdb" do
   action :run
   environment ({'HOME' => '/home/osqa/osqa-server'})
 end
+
 # Populate the OSQA Database
 execute "python migrate" do
   command "python /home/osqa/osqa-server/manage.py migrate forum --fake"
