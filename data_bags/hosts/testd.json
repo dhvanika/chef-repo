@@ -1,0 +1,33 @@
+{
+    "id": "testd",
+    "name": "testd",
+    "ip" : "192.168.33.100",
+
+    "users": {
+       "askbot": {
+          "password": "$1$zZZqRdJw$WlC0WX31fsogWWrkeLwMA."
+       },
+       "ckan": {
+           "password": "$1$zZZqRdJw$WlC0WX31fsogWWrkeLwMA."
+        }
+    },
+    "host": {
+      "name": "testd"
+    },
+    "postgresql": {
+      "app_db": {
+        "user": "askbot",
+        "name": "askbotdb"
+      },
+      "postgres": {
+        "name": "postgres",
+        "password": "foobar"
+      },
+      "askbot": {
+        "name": "askbot",
+        "password": "askbot"
+      }
+    }
+    
+
+}

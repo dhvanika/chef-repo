@@ -1,0 +1,17 @@
+#!/bin/bash
+
+SELF_PATH=$(cd -P -- "$(dirname -- "$0")" && pwd -P) && SELF_PATH=$SELF_PATH/$(basename -- "$0")
+echo $SELF_PATH
+
+here=$(dirname $(dirname $SELF_PATH))
+repo_name=$(basename $here)
+
+echo "HERE: $here"
+echo "REPO: $repo_name"
+
+cd $here
+tar -czvf $repo_name.tar.gz --exclude .git --exclude $repo_name.tar.gz cookbooks
+s3cmd put --acl-public $repo_name.tar.gz s3://chef.clarinova.net/
+
+tar -czvf $repo_name-data.tar.gz --exclude .git --exclude $repo_name-data.tar.gz data_bags
+s3cmd put --acl-public $repo_name-data.tar.gz s3://chef.clarinova.net/

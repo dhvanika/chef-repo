@@ -1,0 +1,33 @@
+{
+    "id": "rsa-devtest",
+    "name": "rsa-devtest",
+    "ip" : "166.78.23.237",
+
+    "users": {
+       "askbot": {
+          "password": "$1$zZZqRdJw$WlC0WX31fsogWWrkeLwMA."
+       },
+       "ckan": {
+           "password": "$1$zZZqRdJw$WlC0WX31fsogWWrkeLwMA."
+        }
+    },
+    "host": {
+      "name": "rsa-devtest"
+    },
+    "postgresql": {
+      "app_db": {
+        "user": "askbot",
+        "name": "askbotdb"
+      },
+      "postgres": {
+        "name": "postgres",
+        "password": "foobar"
+      },
+      "askbot": {
+        "name": "askbot",
+        "password": "askbot"
+      }
+    }
+    
+
+}

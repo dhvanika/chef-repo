@@ -1,0 +1,5 @@
+PS1="[\u@\h \W]\\$ "
+if [ -d /home/<%= @user_name%>/virt ]
+then
+	source /home/<%= @user_name%>/virt/bin/activate
+fi
