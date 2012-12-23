@@ -1,5 +1,6 @@
 {
     "id": "dbd",
     "name": "dbd",
+    "hostname":"dbd.cnsnost.net",
     "ip" : "192.168.33.10"
 }

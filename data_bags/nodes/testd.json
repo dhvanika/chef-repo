@@ -1,19 +1,8 @@
 {
     "id": "testd",
     "name": "testd",
+    "hostname": "testd.cnshost.net",
     "ip" : "192.168.33.100",
-
-    "users": {
-       "askbot": {
-          "password": "$1$zZZqRdJw$WlC0WX31fsogWWrkeLwMA."
-       },
-       "ckan": {
-           "password": "$1$zZZqRdJw$WlC0WX31fsogWWrkeLwMA."
-        }
-    },
-    "host": {
-      "name": "testd"
-    },
     "postgresql": {
       "app_db": {
         "user": "askbot",
@@ -27,7 +16,7 @@
         "name": "askbot",
         "password": "askbot"
       }
-    }
+    },
     
-
+    "run_list": [ "cksimple::test" ]
 }

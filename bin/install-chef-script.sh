@@ -35,8 +35,6 @@ rm -rf /var/chef/cookbooks/* /var/chef/recipes.tgz /var/chef/cache/*
 cd /var/chef-solo
 curl -# -L http://chef.clarinova.net.s3.amazonaws.com/chef-repo-data.tar.gz  | tar -xzvf - 
 
-
-
 cat > /etc/chef/solo.rb<<EOM
 file_cache_path "/var/chef-solo"
 json_attribs "/var/chef/nodes/node.json"

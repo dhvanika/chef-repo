@@ -1,5 +1,9 @@
+127.0.0.1 localhost
+127.0.1.1 <%=@hostname%> <%=@name%>
 <% @hosts.each do |host| %>
+<% if host['name'] != @name %>
 <%=host['ip']%>  <%=host['name']%> 
+<% end %>
 <% end %>
 
 # The following lines are desirable for IPv6 capable hosts

@@ -1,6 +1,8 @@
 {
     "id": "rsa-devtest",
     "name": "rsa-devtest",
+    "hostname":"rsa-devtest.cnsnost.net",
+    
     "ip" : "166.78.23.237",
 
     "users": {

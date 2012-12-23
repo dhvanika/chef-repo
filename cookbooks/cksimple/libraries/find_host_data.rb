@@ -34,7 +34,7 @@ def find_host_data(node)
   end
 
   addresses.each do |address|
-    search('hosts', "ip:#{address}").each do |host|
+    search('nodes', "ip:#{address}").each do |host|
       #Chef::Log.info("FOUND: #{address} #{host['id']}: #{host['ip']}")
       return host
     end

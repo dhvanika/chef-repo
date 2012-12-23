@@ -3,9 +3,10 @@
 # Install askbot
 #
 
-user_name = node[:user][:name]
+user = search('users','id:askbot').first
+user_name = user['name']
 user_dir = "/home/#{user_name}"
-password = node[:user][:password]
+password = user['password']
 
 virt_dir =  "#{user_dir}/virt"
 install_dir = "#{virt_dir}/src/askbot-app"

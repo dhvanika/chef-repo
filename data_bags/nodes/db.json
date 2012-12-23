@@ -1,6 +1,7 @@
 {
     "id": "db",
     "name": "db",
+    "hostname":"db.cnsnost.net",
     "ip" : "192.168.20.10"
     
 }

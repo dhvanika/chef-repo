@@ -1,12 +1,12 @@
-package 'make' #reqiuired to install ruby-shadow 
 
-gem_package "ruby-shadow" do
-  action :install
-  ignore_failure true
-end
-
-node[:users].each do |user_name,user|
-
+node['users'].each do |user_name|
+  user = search(:users,"id:#{user_name}").first()
+  
+  if not user
+    Chef::Log.error("Failed to get user #{user_name} from user data bag")
+    next
+  end
+  
   user_dir = "/home/#{user_name}"
   password = user[:password]
 
